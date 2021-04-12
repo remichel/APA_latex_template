@@ -1,0 +1,97 @@
+\documentclass[a4paper,man,11pt,floatsintext]{apa6}
+%\documentclass[a4paper,man,11pt,floatsintext]{apa7}
+
+% ------------------------------------------------------------------------------
+% Document settings
+% ------------------------------------------------------------------------------
+% jou = journal style, i.e. 2 columns
+% man = manuscript style for submissions
+
+% floatsintext = figures and tables remain at their intended position in the text. Delete it if you want them to occur at the end of the manuscript.
+
+% ------------------------------------------------------------------------------
+% Find the full documentation for apa6/7 package here:
+% ------------------------------------------------------------------------------
+
+% https://ctan.kako-dev.de/macros/latex/contrib/apa6/apa6.pdf
+% https://ctan.mc1.root.project-creative.net/macros/latex/contrib/apa7/apa7.pdf
+
+% ------------------------------------------------------------------------------
+% Additional packages
+% ------------------------------------------------------------------------------
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa6,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+\usepackage{nameref}
+% ------------------------------------------------------------------------------
+% Import .bib-file
+% ------------------------------------------------------------------------------
+\addbibresource{../refs/library.bib}
+% ------------------------------------------------------------------------------
+% Title page
+% ------------------------------------------------------------------------------
+\title{I am a very exciting title}
+\shorttitle{Insert running head here}
+
+% APA 7 version
+%\authorsnames[{1,2},{1,2}]{Auth1, Auth2}
+%\authorsaffiliations{
+%{Institute of Psychology, University of Muenster, Muenster, Germany},
+%{Otto-Creutzfeldt-Center for Cognitive and Behavioral Neuroscience, University of Muenster, Germany}
+%}
+%\authornote{
+%Corresponding author:\\
+%Auth1 \\
+%Mail: *** \\
+%Phone: ***
+%}
+%\leftheader{Auth1 & Auth2 202*} for jou mode only
+
+% APA 6 version
+\author{Auth1$^{1,2}$ and Auth2$^{1,2}$}
+\affiliation{
+$^{1}$Institute of Whatsoever, University of Nowhere \\
+$^{2}$Institute of Something Else, Another University
+}
+\authornote{
+Corresponding author:\\
+Auth1 \\
+Mail: *** \\
+Phone: ***
+}
+%\leftheader{Auth1 & Auth2 202*} for jou mode only
+
+% ------------------------------------------------------------------------------
+% Abstract
+% ------------------------------------------------------------------------------
+\abstract{I am a convincing abstract...}
+\keywords{key1, key2, key3, ...}
+% ------------------------------------------------------------------------------
+% Begin document
+% ------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+% Import some external .tex documents
+\input{introduction}
+\input{method}
+\input{results}
+
+\section*{Funding}
+\label{funding}
+This study is supported by ***.
+
+\section*{Conflict of interest}
+\label{coi}
+The authors declare no competing financial interests.
+
+\section*{Ethical approval}
+\label{ethics}
+The study was conducted in accordance with the ethical standards laid down in the World Medical Association Declaration of Helsinki \parencite{WorldMedicalAssociation2013}.
+
+\section*{Author Contributions}
+\label{contrib}
+Auth1 did whatsoever. Auth2 did something else.
+
+\printbibliography
+
+\end{document}

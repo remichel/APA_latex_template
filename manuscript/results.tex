@@ -1,0 +1,26 @@
+
+ \subsection{Results}
+
+Table \ref{tab:models} shows some intimidating formulas in an APA-style table. I deeply hope that there is another (and more straightforward) way to set up a table, because tables in LaTeX are a nightmare...
+
+\begin{table}[htbp]
+  \centering
+  \vspace*{2em}
+  \begin{threeparttable}
+    \caption{Just some formulas}
+    \label{tab:models}
+    \begin{tabular}{@{}lc@{}}
+      \toprule
+        \multicolumn{1}{c}{\textbf{model}}  & \multicolumn{1}{c}{\textbf{formula}} \\
+      \midrule
+        intercept model & \multicolumn{1}{c}{$f(t) = b_{0}$} \\
+        linear model &   \multicolumn{1}{c}{$f(t) = b_{0} + b_{1}t$} \\
+      \midrule
+    \end{tabular}
+    \begin{tablenotes}[para,flushleft]
+      {\small\textit{Note.} $b_{0,1}$ = beta weights,  $t$ = time}
+    \end{tablenotes}
+  \end{threeparttable}
+\end{table}
+
+Just some random text below the table to create the illusion of a real manuscript. Nothing important to say here.
